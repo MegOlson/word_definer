@@ -1,1 +1,13 @@
-<h1><%= @word.word %></h1>
+<div class="jumbotron">
+  <h1><center><%= @word.word %></center></h1>
+</div>
+
+<br><br><br>
+<h4>Add a definition:</h4>
+<form action="/def" method="post">
+  <div class="form-group">
+    <label for="definition">Definition:</label>
+    <input id="definition" definition="definition" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Add!</button>
+</form>

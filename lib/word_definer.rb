@@ -1,10 +1,11 @@
 class Word
   @@list = []
   attr_reader :id
-  attr_accessor :word
+  attr_accessor :word, :definition
 
-  def initialize(word)
+  def initialize(word, definition)
     @word = word
+    @definition = definition
     @id = @@list.length + 1
   end
 
@@ -20,6 +21,11 @@ class Word
     @@list = []
   end
 
+  def def_display(definition)
+    @def_list = []
+    @def_list.push(definition)
+  end
+
   def self.find(id)
     word_id = id.to_i()
     @@list.each do |word|
@@ -28,5 +34,4 @@ class Word
       end
     end
   end
-
 end

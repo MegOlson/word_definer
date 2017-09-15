@@ -1,0 +1,14 @@
+.jumbotron {
+  margin-top: 40px;
+  background-color: #725c84;
+  color: white;
+}
+
+body {
+  background-color: lavender;
+}
+
+button {
+  background-color: white;
+  color: #725c84;
+}

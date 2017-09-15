@@ -1,4 +1,6 @@
-<h2>List of Words!</h2>
+<div class="jumbotron">
+  <h1><center>Words</center></h1>
+</div>
 
 <% @list.each do |word_name| %>
   <h4><a href="/word_names/<%= word_name.id %>"><%= word_name.word %></a></h4>

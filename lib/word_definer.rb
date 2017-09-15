@@ -1,4 +1,3 @@
-
 class Word
   @@list = []
   attr_reader :id, :list

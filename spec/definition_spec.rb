@@ -1,9 +1,9 @@
 require 'rspec'
 require 'definition'
 
-describe("#add_def") do
+describe("Word#add_def") do
   it("saves a definition to the word") do
     new_definition = Definition.new(definition)
-    expect(add_def).to(eq("Very thirsty"))
+    expect(Word.add_def).to(eq("Very thirsty"))
   end
 end

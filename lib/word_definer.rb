@@ -1,4 +1,4 @@
-require 'pry'
+
 class Word
   @@list = []
   attr_reader :id, :list
@@ -6,7 +6,7 @@ class Word
 
   def initialize(attributes)
     @word = attributes.fetch(:word)
-    # @definitions = []
+    @definitions = []
     @id = @@list.length + 1
   end
 
@@ -18,7 +18,7 @@ class Word
     @@list
   end
 
-  def self.add_def(definition)
+  def add_def(definition)
     @definitions.push(definition)
   end
 

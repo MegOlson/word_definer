@@ -26,3 +26,13 @@ describe(".clear") do
     expect(Word.all()).to(eq([]))
   end
 end
+describe("#id") do
+  it("increments an id by 1 each time a new word is added") do
+    word = Word.new("parched")
+    word.save()
+    word2 = Word.new("starved")
+    word2.save()
+    expect(word.id()).to(eq(1))
+    expect(word2.id()).to(eq(2))
+  end
+end

@@ -1,11 +1,12 @@
+require 'pry'
 class Word
   @@list = []
-  attr_reader :id
+  attr_reader :id, :list
   attr_accessor :word, :definition
 
-  def initialize(word, definition)
-    @word = word
-    @definition = definition
+  def initialize(attributes)
+    @word = attributes.fetch(:word)
+    # @definitions = []
     @id = @@list.length + 1
   end
 
@@ -17,13 +18,12 @@ class Word
     @@list
   end
 
-  def self.clear()
-    @@list = []
+  def self.add_def(definition)
+    @definitions.push(definition)
   end
 
-  def def_display(definition)
-    @def_list = []
-    @def_list.push(definition)
+  def self.clear()
+    @@list = []
   end
 
   def self.find(id)

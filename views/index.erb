@@ -1,0 +1,14 @@
+<h2>List of Words!</h2>
+
+<% @list.each do |name| %>
+  <p><%= name.word %></p>
+<% end %>
+
+<h4>Add a word to the list:</h4>
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="name">Word:</label>
+    <input id="name" name="name" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Add!</button>
+</form>

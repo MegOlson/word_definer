@@ -8,6 +8,11 @@ get('/') do
   erb(:index)
 end
 
+get('/word_names/:id') do
+  @word = Word.find(params[:id])
+  erb(:word)
+end
+
 post('/') do
   name = params["name"]
   word = Word.new(name)
